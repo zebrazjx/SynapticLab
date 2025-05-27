@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #181a20;
+      --bg-alt: #23262f;
+      --primary: #1f8ef1;
+      --text: #f5f6fa;
+      --text-muted: #a5a7b3;
+      --nav-height: 60px;
+      --radius: 12px;
+      --transition: 0.2s cubic-bezier(.4,0,.2,1);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Montserrat', Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--nav-height);
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius);
+      transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+      position: relative;
+    }
+    nav a:hover, nav a:focus {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(31,142,241,0.15);
+    }
+    main {
+      flex: 1;
+      padding-top: calc(var(--nav-height) + 2rem);
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    section {
+      margin-bottom: 4rem;
+      background: var(--bg-alt);
+      border-radius: var(--radius);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      transition: box-shadow var(--transition);
+    }
+    section:hover {
+      box-shadow: 0 4px 32px rgba(31,142,241,0.08);
+    }
+    h1, h2 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+    h2 {
+      font-size: 1.7rem;
+      color: var(--text);
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    .footer {
+      width: 100%;
+      background: var(--bg-alt);
+      color: var(--text-muted);
+      text-align: center;
+      padding: 1.2rem 0;
+      font-size: 1rem;
+      letter-spacing: 0.03em;
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.12);
+      margin-top: auto;
+    }
+    /* Responsive Design */
+    @media (max-width: 700px) {
+      main {
+        padding-top: calc(var(--nav-height) + 1rem);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+      section {
+        padding: 1.5rem 1rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+    @media (max-width: 480px) {
+      nav ul {
+        gap: 0.5rem;
+      }
+      nav a {
+        font-size: 1rem;
+        padding: 0.4rem 0.7rem;
+      }
+      section {
+        padding: 1rem 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home1">Home</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="home">
+      <h1>Welcome!</h1>
+      <p>This is a modern, dark-themed personal website. Use the navigation above to explore the sections. Make it your own by customizing the content and style!</p>
+    </section>
+    <section id="resume">
+      <h2>Resume</h2>
+      <p>Placeholder for your resume. Add your experience, education, and skills here.</p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <p>Showcase your projects here. You can add project cards, links, or images to highlight your work.</p>
+    </section>
+  </main>
+  <footer class="footer">
+    &copy; 2024 Your Name. All rights reserved.
+  </footer>
+</body>
+</html> 
